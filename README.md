@@ -231,7 +231,7 @@ Choosing **Copy with new unique ID** ensures the imported VM gets a fresh identi
 
 ## 📸 Screenshots
 
-> Screenshots of each task are stored in the [`./screenshots/`](az-800-labs/labs/lab-01-hyper-v/screenshots) folder.
+> Screenshots of each task are stored in the [`./screenshots/`](lab-01-hyper-v/steps-with-screenshots.md) folder.
 
 ---
 
