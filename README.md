@@ -10,6 +10,8 @@ Install and configure Hyper-V on a Windows Server machine (SRV01) in a nested vi
 
 ---
 
+
+
 ## 🌍 Why This Matters (Real-World Context)
 
 Hyper-V is Microsoft's native hypervisor built into Windows Server. In enterprise environments it powers:
@@ -23,6 +25,9 @@ Understanding Hyper-V is foundational for any Windows Server or hybrid cloud adm
 
 ---
 
+
+
+
 ## 🖥️ Environment
 
 | Item | Value |
@@ -34,6 +39,9 @@ Understanding Hyper-V is foundational for any Windows Server or hybrid cloud adm
 | Storage Drive | D:\Hyper-V |
 
 ---
+
+
+
 
 ## 📌 Tasks Completed
 
@@ -50,6 +58,9 @@ bcdedit /set hypervisorlaunchtype auto
 Restart-Computer -Force
 ```
 
+
+
+
 After the reboot, installed the Hyper-V role via **Server Manager**:
 
 1. Opened **Server Manager → Add Roles and Features**
@@ -59,6 +70,9 @@ After the reboot, installed the Hyper-V role via **Server Manager**:
 5. On the **Create Virtual Switches** page, selected the **Ethernet (Microsoft Hyper-V Network Adapter)**
 6. Enabled **Restart the destination server automatically if required**
 7. Completed the install and waited for the server to restart
+
+
+   
 
 **Why `bcdedit /set hypervisorlaunchtype auto`?**  
 In a nested environment, the physical host's hypervisor must expose virtualization extensions to the guest OS. The `bcdedit` command tells the Windows Boot Manager to always launch the hypervisor. Without it, Hyper-V installs but VMs fail to start.
@@ -73,6 +87,8 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
 ### Task 2 — Create a Private Virtual Switch
 
 **What I did:**
+
+
 
 1. Opened **Hyper-V Manager**
 2. Selected **SRV01** in the navigation pane
@@ -93,6 +109,9 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
 The lab simulates an isolated internal environment — VMs communicating only with each other, no external traffic. This is a common pattern for test lab networks and secure workloads.
 
 ---
+
+
+
 
 ### Task 3 — Create a Virtual Hard Disk (VHD)
 
@@ -127,6 +146,10 @@ New-VHD -Path "D:\Hyper-V\OSDisk.vhdx" -SizeBytes 50GB -Dynamic
 ```
 
 ---
+
+
+
+
 
 ### Task 4 — Create a Virtual Machine (VM3)
 
@@ -172,6 +195,8 @@ Set-VMMemory -VMName "VM3" -DynamicMemoryEnabled $true -MinimumBytes 512MB -Maxi
 ```
 
 ---
+
+
 
 ### Task 5 — Import a Virtual Machine (VM1)
 
