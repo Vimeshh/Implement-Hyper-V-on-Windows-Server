@@ -1,10 +1,5 @@
 # Lab 01 — Implement Hyper-V on Windows Server
 
-**Lab Reference:** WSVHA.1-001  
-**Platform:** [Learn on Demand — Lab 76720](https://alh.learnondemand.net/Lab/76720?instructionSetLang=en&classId=694960)  
-**Duration:** ~30 minutes  
-**Status:** ✅ Completed  
-**AZ-800 Domain:** Manage virtual machines and containers
 
 ---
 
@@ -236,7 +231,7 @@ Choosing **Copy with new unique ID** ensures the imported VM gets a fresh identi
 
 ## 📸 Screenshots
 
-> Screenshots of each task are stored in the [`./screenshots/`](./screenshots/) folder.
+> Screenshots of each task are stored in the [`./screenshots/`](az-800-labs/labs/lab-01-hyper-v/screenshots) folder.
 
 ---
 
