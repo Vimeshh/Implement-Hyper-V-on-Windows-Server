@@ -1,10 +1,7 @@
 # Lab 01 — Implement Hyper-V on Windows Server
 ### Step-by-Step Walkthrough with Screenshots
 
-**Lab Reference:** WSVHA.1-001  
-**Platform:** [Learn on Demand — Lab 76720](https://alh.learnondemand.net/Lab/76720?instructionSetLang=en&classId=694960)  
-**Server:** SRV01.hexelo.com | **OS:** Windows Server 2025 Datacenter  
-**Date Performed:** 21 June 2026
+
 
 ---
 
